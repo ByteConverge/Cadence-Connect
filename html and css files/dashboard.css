@@ -1,0 +1,11 @@
+@import url("./style.css");
+
+.nav-links-Wrap ul:nth-child(2) li a:hover {
+  font-size: 1.2rem;
+}
+
+.nav-links-Wrap ul:nth-child(2) li:nth-child(2) a {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: black;
+}

@@ -1,0 +1,45 @@
+@import url("./style.css");
+
+.mainSection {
+  min-height: 90dvh;
+}
+
+p {
+  font-size: 1.4rem;
+  min-height: 5vh;
+}
+
+.aboutUs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 60vh;
+  width: 90vw;
+  margin-top: 2%;
+  margin: 2rem auto;
+  /* background: grey; */
+  gap: 1rem;
+}
+
+.aboutUs div:first-child {
+  /* background: greenyellow; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutUs div:first-child p {
+}
+
+.aboutUs div:last-child {
+  background: rgb(185, 187, 182);
+  border-radius: 1rem;
+}
+
+.ourStory {
+  width: 90vw;
+  margin: 2rem auto;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

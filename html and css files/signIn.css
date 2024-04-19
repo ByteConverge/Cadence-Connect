@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+body {
+  min-height: 100vh;
+  background-image: url("./signUpbg.jfif");
+  display: grid;
+  place-items: center;
+}
+.backArrow {
+  display: flex;
+  padding-left: 10px;
+}
+
+.container {
+  width: 50vw;
+  min-height: 70vh;
+  outline: 1px solid black;
+  background: rgba(255, 255, 255, 0.675);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 90%;
+}
+
+.formSection {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-around; */
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  height: 20%;
+  /* background: red; */
+}
+.iconWrap article {
+  height: 60%;
+}
+
+.iconWrap article figure {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  width: 55%;
+  height: 2rem;
+  background-color: black;
+  color: white;
+  margin-top: 16px;
+  align-self: center;
+}
+
+form {
+  padding: 2rem;
+  height: 90%;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.inputWrap {
+  height: 70%;
+}
+
+input {
+  height: 10%;
+  align-self: center;
+  margin-top: 4rem;
+  transform: translateY(-5rem);
+}
+
+.inputWrap {
+  background: rgba(128, 128, 128, 0.319);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 55%;
+  align-self: center;
+  padding: 1rem;
+}
+
+.inputUI {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* align-items: center; */
+  height: 90%;
+  /* background: greenyellow; */
+}
+
+.inputUI input:first-child {
+  /* background: green; */
+  transform: translateY(3.5rem);
+}
+
+.formSection > p {
+  width: 55%;
+  align-self: center;
+}
+
+input:focus {
+  outline: 1px solid blue;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
