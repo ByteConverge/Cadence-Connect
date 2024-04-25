@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
   /* outline: 1px solid red; */
+  /* overflow-x: clip;
+  overflow-y: auto;
+  scrollbar-width: none; */
 }
 
 html {
@@ -15,8 +18,19 @@ html {
 
 body {
   /* font-size: inter; */
+  width: 100vw;
   color: black;
+  /* background: orange; */
+  /* outline: 1px solid red; */
+  overflow: clip;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
 span {
   display: block;
   text-align: center;
@@ -42,12 +56,15 @@ figure {
   width: 100vw;
   display: flex;
   flex-direction: column;
+
+  /* outline: 1px solid red; */
 }
 
 .hero {
-  width: 80vw;
+  /* outline: 1px solid red; */
+  max-width: 100%;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   /* background: gray; */
   background: linear-gradient(rgba(0, 0, 0, 0.144), rgba(0, 0, 0, 1)),
     url("./back-img-hero.jfif");
@@ -57,7 +74,6 @@ figure {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* overflow-x: clip; */
 }
 
 .nav-links-Wrap ul li a {
@@ -158,14 +174,16 @@ nav ul {
   width: 100%;
   align-self: center;
   text-align: center;
-  font-size: 3.5rem;
+  /* font-size: 3rem; */
+  font-size: 3.5vw;
   padding-bottom: 2rem;
   font-weight: bolder;
   font-family: inter;
 }
 
 .hero-p {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 1.8vw;
   align-self: center;
   font-weight: 400;
   font-family: monserrat;
@@ -334,7 +352,7 @@ form {
   border-radius: 50%;
 }
 
-/* EventCARDS */
+/* EventCARDS  side bAR*/
 
 .event-cards {
   min-height: 100vh;
@@ -438,7 +456,7 @@ footer {
   margin-top: 10rem;
   height: 100vh;
   display: grid;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: 100%;
   grid-template-rows: 50% 50%;
 

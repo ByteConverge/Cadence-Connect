@@ -1,0 +1,62 @@
+@import url("signUp.css");
+
+.nextWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.nextWrap button {
+  width: 10%;
+  background: none;
+  display: flex;
+  justify-content: end;
+  border: none;
+}
+
+.nextWrap button a {
+  color: white;
+  text-decoration: none;
+}
+
+.nextWrap figure {
+  height: 40%;
+  margin-left: 5px;
+}
+
+.nextWrap {
+  text-align: center;
+  height: 10%;
+}
+
+.nextWrap button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.formWwrap {
+  background: rgb(209, 209, 209);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.inputWrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input {
+  width: 90%;
+  align-self: center;
+  height: 12%;
+  border: 1px solid black;
+  padding-left: 10px;
+}
