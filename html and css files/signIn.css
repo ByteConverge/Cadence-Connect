@@ -26,9 +26,9 @@ img {
 }
 
 .container {
-  height: 90vh;
+  height: 80vh;
   width: 65vw;
-  background: #ffffff7b;
+  background: #ffffffa3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,6 +67,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .welcomeBack h1 {
@@ -93,7 +94,7 @@ form {
 
 .formWwrap {
   background: rgb(209, 209, 209);
-  min-height: 75%;
+  min-height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -132,6 +133,8 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   gap: 35px;
+  /* position: relative;
+  top: 7%; */
 }
 .iconWrapper a {
   height: 100%;
