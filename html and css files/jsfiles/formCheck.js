@@ -54,6 +54,8 @@ form.addEventListener('submit', (event) => {
 
  // Confirm password validation (check if it matches password)
  if (confirmPassword.value !== password.value) {
+    password.value = null;
+    confirmPassword.value = null;
      alert('Passwords do not match.');
      isValid = false;
  }
