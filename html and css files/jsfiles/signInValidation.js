@@ -2,11 +2,42 @@ const form = document.getElementById('myForm');
 const inputWrap = document.querySelector(".inputWrap");
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const container = document.querySelector(".container")
+const main = document.querySelector("main");
 
 
 
 let errorMessageEmail = document.createElement("h2");
-errorMessageEmail.style.cssText = "color:red; font-size:10px ; height: 10%; text-align:left;"
+errorMessageEmail.style.cssText = "color:red; font-size:10px ; height: 8%; text-align:left;"
+
+// Successful Log In Message!!!
+
+let successMessage = document.createElement("div");
+successMessage.style.cssText = "border:1px solid black ; height:10vh ; width:30% ; display:grid; place-items:center; padding:5px"
+
+     
+
+     
+
+
+
+// VALIDATION EVENT Listeners
+
+email.addEventListener("blur",()=>{
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(email.value)) {
+       errorMessageEmail.textContent = " Please enter a valid email address."
+       inputWrap.insertBefore(errorMessageEmail , email.nextElementSibling)
+   
+       isValid = false;  
+       
+    }else{
+        errorMessageEmail.remove();
+    }
+
+})
+
+
 
     
 form.addEventListener('submit', (event) => {
@@ -21,21 +52,19 @@ form.addEventListener('submit', (event) => {
  // Email validation (check for @ and .)
  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
  if (!emailRegex.test(email.value)) {
-    errorMessageEmail.textContent = " Please enter a valid email address."
-    inputWrap.insertBefore(errorMessageEmail , email.nextElementSibling)
-
-    isValid = false;  
-    
- }else{
-     errorMessageEmail.remove();
+    isValid = false;    
  }
 
- // Password validation (example: check for minimum length)
 
  if (isValid) {
-     
-     alert('logged in');
-    //  window.location.assign("../../html and css files/signUpRegisterVendor.html")
-     // You can also use AJAX to submit the form data to a server-side script for further processing
+    container.insertBefore(successMessage , main);
+    successMessage.innerHTML = "Authentication in Progress...";
+    container.insertBefore(successMessage , main)
+    setTimeout(()=>{
+        successMessage.innerHTML = "Logged In";
+        setTimeout(() => {
+            successMessage.remove();
+        }, 2000);
+    },3000)
  }
 });

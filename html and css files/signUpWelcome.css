@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +27,22 @@ img {
   width: 100%;
 }
 
+/*  */
+.welcomeback {
+  display: flex;
+  /* background: red; */
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeback figure {
+  width: 2rem;
+  height: 2rem;
+}
+.welcomeback h1 {
+  font-size: 48px;
+}
+
 .backArrow {
   height: 2.5rem;
   width: 2.5rem;
@@ -44,6 +62,8 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .welcome {
@@ -52,8 +72,19 @@ main {
 }
 
 .welcomeText {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  /* background: red; */
+  margin: 0 auto;
+}
+
+.welcomeText2 {
+  font-size: 1.3rem;
+  width: 89%;
+  /* background: red; */
 }
 
 .vendorClientWrap {
