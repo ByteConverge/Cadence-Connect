@@ -65,9 +65,9 @@ form.addEventListener('submit', (event) => {
         setTimeout(() => {
             successMessage.remove();
             setTimeout(() => {
-                window.location.assign("../../html and css files/vendorDashboard.html") 
-             }, 2000);
-        }, 1000);
+               window.location.assign("../../html and css files/clientLoggedIn.html") 
+            }, 2000);
+        }, 2000);
     },3000)
  }
 });

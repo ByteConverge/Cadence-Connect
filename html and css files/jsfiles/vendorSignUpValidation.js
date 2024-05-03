@@ -19,7 +19,7 @@ let successMessage = document.createElement("div")
 //  Error Message  
 let errorPwdMessage = document.createElement("div")
    errorPwdMessage.innerHTML = "Passwords do not match!"
-   errorPwdMessage.style.cssText = "position: absolute; z-index:1000 ; padding:10px; background: rgb(179, 97, 97,0.8); color:white; height:10vh; align-self:center; top:20%; font-size:1.5rem; display:grid; place-items:center;border:2px solid red "
+   errorPwdMessage.style.cssText = "position: absolute; z-index:1000 ; padding:10px; background:white; height:10vh; align-self:center; top:-20px; font-size:1.5rem; display:grid; place-items:center;border:1px solid red "
 
 // Validation EVENT LISTENERS
    
@@ -95,7 +95,7 @@ form.addEventListener('submit', (event) => {
     container.insertBefore(errorPwdMessage , form)  
     setInterval(() => {
         errorPwdMessage.remove();
-    }, 2000);                           ;
+    }, 4000);                           ;
  }
 
  if (isValid) {
