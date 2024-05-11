@@ -1,0 +1,39 @@
+@import "./dashboard.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+figure {
+  height: 4rem;
+  width: 4rem;
+}
+body {
+  /* background: black; */
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.hero {
+  background-image: url("./repeated-pic\ EMS.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Main styling */
+
+.main {
+  height: 100vh;
+}

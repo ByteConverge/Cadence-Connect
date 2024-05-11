@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadence||Connect</title>
+    <link rel="stylesheet" href="./dashboardTwo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <!-- Nav -->
+        <nav>
+          <figure id="CadenceLogo">
+            <img src="../EMS assets/CADENCE CONNECT LOGO WHITE.png" alt="" />
+          </figure>
+
+          <div class="nav-links-Wrap">
+            <ul>
+              <li><a href="vendorHomelink.html">Home</a></li>
+              <li><a href="./vendorAboutlink.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <ul class="profile-circle">
+              <figure>
+                <img
+                  src="../EMS assets/profile-circle.svg"
+                  height=""
+                  width=""
+                />
+              </figure>
+              <p>profile</p>
+              <figure class="arrowD">
+                <img src="../EMS assets/arrow-down.svg" alt="" />
+              </figure>
+            </ul>
+            <div class="profileClicked d-None">
+              <p><a href="#"> Dashboard</a></p>
+              <p><a href="#">Settings</a></p>
+              <p><a href="../index.html">Log Out</a></p>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Main -->
+      <main class="main"></main>
+      <footer>
+        <figure>
+          <img src="../EMS assets/bigPicFooter.svg" alt="" />
+        </figure>
+        <div class="footerNotes">
+          <div class="footerLogo">
+            <img src="../EMS assets/CADENCE CONNECT LOGO WHITE.png" alt="" />
+          </div>
+          <!--  -->
+          <ul>
+            <li>About us</li>
+            <li>About CadenceConnect</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+            <li>Copyright infringement Policy</li>
+          </ul>
+          <!--  -->
+          <ul>
+            <li>Support</li>
+            <li>support@cadenceConnect.ng</li>
+            <li>Safety tips</li>
+            <li>Contact Us</li>
+            <li>FAQ</li>
+          </ul>
+          <!--  -->
+          <ul>
+            <li>Our resources</li>
+            <li>cadenceConnect on FB</li>
+            <li>Our instagram</li>
+            <li>Our Youtube</li>
+            <li>Our twitter</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document
+        .querySelector(".profile-circle")
+        .addEventListener("click", () => {
+          document.querySelector(".profileClicked").classList.toggle("d-None");
+        });
+    </script>
+  </body>
+</html>

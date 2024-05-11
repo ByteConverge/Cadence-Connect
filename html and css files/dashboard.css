@@ -12,6 +12,7 @@
 
 .Main-BelowHero {
   margin-top: 3rem;
+  position: relative;
 }
 
 .event-cards {
@@ -20,6 +21,9 @@
   grid-template-columns: 32% 32% 32%;
 
   gap: 4px;
+}
+.event-cards article {
+  padding-bottom: 3rem;
 }
 
 .Main-BelowHero {
@@ -58,4 +62,91 @@
 .navigateBtn img {
   height: 100%;
   width: 100%;
+}
+
+.profile-circle {
+  transform: translateX(-7rem);
+  display: grid;
+  place-content: center;
+  /* background: red; */
+  width: 125px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.profile-circle figure {
+  height: 35px;
+  width: 35px;
+  transform: translateX(1.5rem);
+}
+
+.arrowD {
+  transform: translateX(-5rem);
+  position: relative;
+  right: 3rem;
+  /* background: red; */
+}
+
+.profileClicked {
+  position: absolute;
+  top: 9%;
+  right: 7.2%;
+  color: black;
+  background-color: white;
+  width: 181px;
+  height: 94px;
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profileClicked p {
+  font-size: 18px;
+}
+
+.profileClicked p a {
+  color: black;
+}
+
+span {
+  display: inline;
+}
+.navigateIcon {
+  z-index: 100;
+  position: absolute;
+  right: 1%;
+  top: -50%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background: red; */
+}
+.navigateIcon li img {
+  width: 100%;
+  height: 100%;
+}
+.navigateIcon li a {
+  width: 100%;
+  height: 100%;
+}
+.navigateIcon li {
+  list-style: none;
+  height: 3rem;
+  width: 3rem;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  /* position: absolute;
+  bottom: 35%;
+  right: 130%;
+  bottom: 4rem;
+  right: 10rem; */
+}
+
+.d-None {
+  display: none;
 }
