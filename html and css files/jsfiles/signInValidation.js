@@ -66,7 +66,7 @@ form.addEventListener('submit', (event) => {
             successMessage.remove();
             setTimeout(() => {
                 // window.location.assign("../../html and css files/vendorDashboard.html") 
-                window.location.href = "../vendorDashboard.html"
+                window.location.href = "../#/vendorDashboard.html"
              }, 2000);
         }, 1000);
     },3000)
