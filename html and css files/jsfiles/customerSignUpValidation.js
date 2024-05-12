@@ -32,12 +32,14 @@ let errorMessagePwd = document.createElement("p");
 // succcess message
 let successMessage = document.createElement("div")
    // successMessage.innerHTML = "Form submitted successfully!!"
-   successMessage.style.cssText = "position: absolute; z-index:1000 ; padding:10px; background:white; height:10vh; align-self:center; top:-20px; font-size:1.5rem; display:grid; place-items:center;border:1px solid green "
+   successMessage.style.cssText = "z-index:1000 ; padding:10px; background:white; height:7vh; align-self:center; font-size:1.2rem; display:grid; place-items:center;border:1px solid green "
 //  Error Message  
 let errorPwdMessage = document.createElement("div")
    errorPwdMessage.innerHTML = "Passwords do not match!"
-   errorPwdMessage.style.cssText = "position: absolute; z-index:1000 ; padding:10px; background:white; height:10vh; align-self:center; top:-20px; font-size:1.5rem; display:grid; place-items:center;border:1px solid red "
-
+   errorPwdMessage.style.cssText = "z-index:1000 ; padding:10px; background:white; height:7vh; align-self:center; font-size:1.2rem; display:grid; place-items:center;border:1px solid green "
+// error message
+let errormsg = document.createElement("div");
+errormsg.style.cssText = "z-index:1000 ; padding:10px; background:white; height:7vh; align-self:center; font-size:1.2rem; display:grid; place-items:center;border:1px solid red "
 
 
 // email validation
@@ -148,7 +150,8 @@ form.addEventListener('submit', (event) => {
     let fullNameValue = fullName.value;
     let emailvalue = email.value;
     let contactValue = contact.value;
-    let passwordValue =password.value ;;g
+    let passwordValue =password.value ;
+    let passwordConfirmValue = confirmPassword.value;
      let user = new UserInfo(fullNameValue , emailvalue , contactValue ,passwordValue, passwordConfirmValue )
     
      fetch("https://cadence-connect.onrender.com/api/v1/users/sign-up",{
@@ -159,16 +162,30 @@ form.addEventListener('submit', (event) => {
      body: JSON.stringify(user)
      }).then(response =>{
         if(response.ok){
-         window.location.replace("../../html and css files/clientLoggedIn.html")
-        console.log("user signed up successfully")
-        console.log(response)
-        }else{
-         successMessage.innerHTML = "Form submitted successfully!!"
+         console.log(response)
+         successMessage.innerHTML = "Redirecting..."
+         container.insertBefore(successMessage , form)
          setTimeout(() => {
             successMessage.remove()
-         }, 2000);
+         setTimeout(() => {
+            window.location.replace("../../html and css files/clientLoggedIn.html")
+         }, 1000);
+         }, 5000);
+         
+        
+        }else{
+         errormsg.innerHTML = "check your email!"
+         container.insertBefore(errormsg, form)
+         setTimeout(() => {
+           errormsg.remove();
+         }, 3000);
         }
      }).catch(error=>{
+      errormsg.innerHTML = "Check your data Connection!"
+      container.insertBefore(errormsg , form)
+      setTimeout(() => {
+        errormsg.remove();
+      }, 6000);
         console.log("Error during signUp")
      })
 
