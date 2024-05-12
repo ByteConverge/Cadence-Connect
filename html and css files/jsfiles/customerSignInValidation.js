@@ -121,7 +121,7 @@ form.addEventListener('submit', (event) => {
          
         }
      }).catch(error=>{
-      BadErrorMessage.innerHTML = "Error during signup"
+      BadErrorMessage.innerHTML = "Error during sign In"
       container.insertBefore(BadErrorMessage, main)
       BadErrorMessage.style.cssText = "border:1px solid black ; height:10vh ; width:30% ; display:grid; place-items:center; padding:5px;font-size:1rem;color:red"
       setTimeout(() => {
