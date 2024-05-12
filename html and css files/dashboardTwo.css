@@ -29,11 +29,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 75vh;
 }
 
 /* Main styling */
 
 .main {
-  height: 100vh;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  display: flex;
 }

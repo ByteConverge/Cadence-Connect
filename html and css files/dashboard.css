@@ -35,6 +35,12 @@
   padding-top: 1rem;
 }
 
+.eleg-star-rate a {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: black;
+}
+
 .lists-of-events {
   /* background: rgb(232, 182, 182); */
   width: 30%;

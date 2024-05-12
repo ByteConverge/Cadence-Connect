@@ -6,6 +6,23 @@ const form = document.getElementById('myForm'),
    password = document.getElementById('password'),
    confirmPassword = document.getElementById('confirmPassword'),
    container = document.querySelector(".container");
+   const togglePassword = document.querySelector(".togglepwd");
+const toggleConfirmPassword = document.querySelector(".togglepwd2")
+   // toggle password
+togglePassword.addEventListener("click",()=>{
+    if(password.type === "password"){
+       password.type = "text"
+    }else{
+       password.type = "password";
+    }
+ })
+ toggleConfirmPassword.addEventListener("click",()=>{
+    if(confirmPassword.type === "password"){
+       confirmPassword.type = "text"
+    }else{
+       confirmPassword.type = "password";
+    }
+ })
 
 // validation messages
 let errorMessage= document.createElement("p");

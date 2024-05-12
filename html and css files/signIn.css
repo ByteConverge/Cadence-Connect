@@ -115,6 +115,15 @@ form {
   flex-direction: column;
   justify-content: center;
   gap: 8px;
+  position: relative;
+}
+
+.togglepwd {
+  position: absolute;
+  right: 5%;
+  bottom: 37%;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .inputWrap input {

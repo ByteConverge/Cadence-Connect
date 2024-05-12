@@ -25,10 +25,11 @@
       </header>
       <!-- fORM SECTION -->
 
-      <form action="" id="myForm">
+      <form id="myForm">
         <div class="formWwrap">
           <div class="inputWrap">
             <!-- full name -->
+            <input type="hidden" name="role" value="client" />
             <input
               type="text"
               name=""
@@ -55,12 +56,15 @@
             <!-- gender -->
             <!-- <input type="text" name="" id="" placeholder="Gender" required /> -->
             <!-- Password -->
+
             <input
               type="password"
               placeholder="Password"
               id="password"
               required
             />
+            <span class="togglepwd">&#x1f441;</span>
+
             <input
               type="password"
               name=""
@@ -68,6 +72,7 @@
               placeholder="Confirm Password"
               required
             />
+            <span class="togglepwd2">&#x1f441;</span>
           </div>
           <div class="iconWrapper">
             <figure>
