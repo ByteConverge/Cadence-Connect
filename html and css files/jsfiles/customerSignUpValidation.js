@@ -148,9 +148,7 @@ form.addEventListener('submit', (event) => {
     let fullNameValue = fullName.value;
     let emailvalue = email.value;
     let contactValue = contact.value;
-    let passwordValue =password.value ;;
-    let passwordConfirmValue = confirmPassword.value;
-    
+    let passwordValue =password.value ;;g
      let user = new UserInfo(fullNameValue , emailvalue , contactValue ,passwordValue, passwordConfirmValue )
     
      fetch("https://cadence-connect.onrender.com/api/v1/users/sign-up",{

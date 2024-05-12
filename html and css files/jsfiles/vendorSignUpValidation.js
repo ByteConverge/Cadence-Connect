@@ -119,7 +119,7 @@ form.addEventListener('submit', (event) => {
      
      container.insertBefore(successMessage , form)
      setTimeout(() => {
-         window.location.assign("../html and css files/signUpRegisterVendor.html")
+         window.location.replace("../html and css files/signUpRegisterVendor.html")
         
      }, 3000);
      // You can also use AJAX to submit the form data to a server-side script for further processing

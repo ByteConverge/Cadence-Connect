@@ -101,7 +101,7 @@ form.addEventListener('submit', (event) => {
             successMessage.style.cssText = "border:1px solid black ; height:10vh ; width:30% ; display:grid; place-items:center; padding:5px ; color:green";
             container.insertBefore(successMessage , main)
             setTimeout(() => {
-               window.location.assign("../../html and css files/vendorDashboard.html") 
+               window.location.replace("../../html and css files/vendorDashboard.html") 
             }, 1000);
            }, 800);
            console.log(response)
