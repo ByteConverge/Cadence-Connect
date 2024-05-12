@@ -31,7 +31,7 @@ let errorMessageContact = document.createElement("p");
 let errorMessagePwd = document.createElement("p");
 // succcess message
 let successMessage = document.createElement("div")
-   successMessage.innerHTML = "Form submitted successfully!!"
+   // successMessage.innerHTML = "Form submitted successfully!!"
    successMessage.style.cssText = "position: absolute; z-index:1000 ; padding:10px; background:white; height:10vh; align-self:center; top:-20px; font-size:1.5rem; display:grid; place-items:center;border:1px solid green "
 //  Error Message  
 let errorPwdMessage = document.createElement("div")
@@ -41,6 +41,8 @@ let errorPwdMessage = document.createElement("div")
 
 
 // email validation
+
+console.log("hi")
 
 email.addEventListener("blur" , ()=>{
 
@@ -57,16 +59,18 @@ email.addEventListener("blur" , ()=>{
 })
 
 // Password length validation
+password.addEventListener("keyup" , ()=>{
+   if (password.value.length < 8) {
+       errorMessagePwd.textContent = " Password must be at least 8 characters long."
+       inputWrap.insertBefore(errorMessagePwd , password.nextElementSibling)
+  
+      //  isValid = false;
+   }else{
+       errorMessagePwd.remove();
+   }
 
+})
 
-// Passwords match check
-
-
-// form.addEventListener("submit" , (e)=>{
-//     e.preventDefault();
-//     console.log("submitted")
-
-// })
 
 
 
@@ -75,6 +79,7 @@ email.addEventListener("blur" , ()=>{
 
 form.addEventListener('submit', (event) => {
  event.preventDefault(); 
+ console.log("hello")
 
 
  // Validation checks
@@ -82,7 +87,7 @@ form.addEventListener('submit', (event) => {
 
  // Full name validation 
  if (fullName.value.trim() === '' ) {
-    event.preventDefault(); 
+   
      errorMessage.textContent = "Please enter your full name."
        inputWrap.insertBefore(errorMessage , fullName.nextElementSibling)
    
@@ -96,22 +101,25 @@ form.addEventListener('submit', (event) => {
  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
  if (!emailRegex.test(email.value)) {
     event.preventDefault(); 
-    let emalVal = email.value;
-    email.value = null;
+   //  let emalVal = email.value;
+   //  email.value = null;
      
-    // isValid = false;  
+    isValid = false;  
     
  }
 
-//  Password validation (example: check for minimum length)
+ //  Password validation (example: check for minimum length)
  if (password.value.length < 8) {
-    event.preventDefault(); 
-     isValid = false;
- }
+   isValid = false;
+}
+ 
+
+
+ 
 
 //  Passwords match check
  if (confirmPassword.value !== password.value) {
-    event.preventDefault(); 
+   
      isValid = false;
      
      password.value = null;
@@ -123,7 +131,7 @@ form.addEventListener('submit', (event) => {
  }
 
  if (isValid) {
-    event.preventDefault();
+   
 
 
      class UserInfo{
@@ -157,7 +165,10 @@ form.addEventListener('submit', (event) => {
         console.log("user signed up successfully")
         console.log(response)
         }else{
-            console.log("signup failed")
+         successMessage.innerHTML = "Form submitted successfully!!"
+         setTimeout(() => {
+            successMessage.remove()
+         }, 2000);
         }
      }).catch(error=>{
         console.log("Error during signUp")
