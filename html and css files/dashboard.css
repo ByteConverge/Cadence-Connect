@@ -78,12 +78,13 @@
   width: 125px;
   height: 35px;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 .profile-circle figure {
   height: 35px;
   width: 35px;
-  transform: translateX(1.5rem);
+  transform: translateX(2rem);
 }
 
 .arrowD {

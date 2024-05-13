@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 
 img {
@@ -12,8 +13,8 @@ img {
 }
 
 figure {
-  height: 4rem;
-  width: 4rem;
+  height: 2rem;
+  width: 2rem;
 }
 body {
   /* background: black; */
@@ -22,6 +23,8 @@ body {
 .container {
   width: 100vw;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -37,5 +40,101 @@ body {
 .main {
   min-height: 100vh;
   margin-bottom: 3rem;
+  margin-top: 2rem;
   display: flex;
+  /* background-color: red; */
+  width: 90%;
+  min-height: 1514px;
+  align-self: center;
+}
+
+.elegantCoSection {
+  /* background-color: rgba(42, 165, 50, 1); */
+  width: 60%;
+}
+.ElegantWeddingtext-star {
+  display: flex;
+  width: 100%;
+}
+.ElegantWeddingtext-star h1 {
+  font-size: 48px;
+}
+
+.ElegantWeddingtext-star sub {
+  display: flex;
+  position: relative;
+  /* background-color: aquamarine; */
+  align-items: flex-end;
+}
+.ElegantWeddingtext-star sub figure {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+/*  */
+.rayfieldIcon {
+  display: flex;
+  margin-top: 10px;
+  align-items: end;
+  gap: 2px;
+}
+.rayfieldIcon p {
+  font-size: 1.6rem;
+}
+/*  */
+.messageFav {
+  width: 100%;
+  /* background-color: azure; */
+  display: flex;
+  justify-content: start;
+  gap: 5rem;
+}
+
+.iconMessage {
+  width: 150px;
+  height: 44px;
+  background: black;
+  align-self: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+.iconMessage a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  font-size: larger;
+  align-items: center;
+}
+
+.iconMessage a h3 {
+  margin-left: 6px;
+}
+/*  */
+
+.favz {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2rem 0;
+}
+
+.favz h3 {
+  text-decoration: underline;
+}
+/*  */
+.eventPlannerDetails {
+  background: grey;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.eventPlannerDescription {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 44px;
+}
+.eventPlannerDescription p {
+  text-align: justify;
 }
